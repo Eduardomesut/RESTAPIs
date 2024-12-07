@@ -11,6 +11,8 @@ import java.net.http.HttpResponse;
 
 public class RestApiTutorial {
 
+    //La idea es mejorar esto para que haya un menú y puedas subir tus archivosnde audios locales y transcribirlos en texto
+
     public static void main(String[] args) {
         Transcript transcript = new Transcript();
         transcript.setAudio_url("https://github.com/johnmarty3/JavaAPITutorial/raw/refs/heads/main/Thirsty.mp4");
