@@ -15,7 +15,7 @@ public class MAIN {
 
 
         try {
-            Pokemon busqueda = apiConfig.obtenerInfoPorNombre("dialga");
+            Pokemon busqueda = apiConfig.obtenerInfoPorNombre("pikachu");
             if (busqueda == null){
                 System.out.println("No hay pokemón con este nombre!");
             }else {
