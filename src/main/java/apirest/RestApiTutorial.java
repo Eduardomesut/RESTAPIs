@@ -13,9 +13,14 @@ public class RestApiTutorial {
 
     //La idea es mejorar esto para que haya un menú y puedas subir tus archivosnde audios locales y transcribirlos en texto
 
-    public static void main(String[] args) {
+
+
+
+
+
+    public String transcript(String audio) {
         Transcript transcript = new Transcript();
-        transcript.setAudio_url("https://github.com/johnmarty3/JavaAPITutorial/raw/refs/heads/main/Thirsty.mp4");
+        transcript.setAudio_url(audio);
         Gson gson = new Gson();
         String jsonRequest = gson.toJson(transcript);
 
@@ -52,7 +57,7 @@ public class RestApiTutorial {
             }
 
             System.out.println("Leido y completado");
-            System.out.println("El texto procesado dice: " + transcript.getText());
+
 
 
 
@@ -64,6 +69,6 @@ public class RestApiTutorial {
             throw new RuntimeException(e);
         }
 
-
+        return transcript.getText();
     }
 }
